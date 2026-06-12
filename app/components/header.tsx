@@ -5,10 +5,9 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Accueil" },
-  { href: "#sae", label: "SAÉ" },
-  { href: "#stage", label: "Stage" },
-  { href: "#competences", label: "Compétences" },
-  { href: "#bilan", label: "Bilan" },
+  { href: "/projets", label: "Projets" },
+  { href: "/stage", label: "Stage" },
+  { href: "/bilan", label: "Bilan" },
 ];
 
 export default function Header() {
@@ -24,7 +23,8 @@ export default function Header() {
 
         <nav className="flex items-center gap-1">
           {navItems.map(({ href, label }) => {
-            const isActive = href === "/" && pathname === "/";
+            const isActive =
+              href === "/" ? pathname === "/" : pathname === href;
 
             return (
               <Link

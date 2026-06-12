@@ -1,5 +1,8 @@
+import ButtonRainbow from "./components/Buttons/button-rainbow";
+import ButtonWhite from "./components/Buttons/button-white";
 import Header from "./components/header";
 import Link from "next/link";
+import Balise from "./components/items/balise";
 
 const stats = [
   { value: "6", label: "SAÉ réalisées" },
@@ -71,13 +74,12 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
+      <main className="bg-blobs">
         {/* Hero */}
         <section className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-200/80 bg-white/80 px-4 py-1.5 text-sm text-gray-600 shadow-sm backdrop-blur-sm">
-            <SparkleIcon />
-            <span>Portfolio professionnel · BUT</span>
-          </div>
+          <Balise icon={<SparkleIcon />} className="mb-8">
+            Portfolio professionnel · BUT
+          </Balise>
 
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             Bonjour, je suis
@@ -92,19 +94,8 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="#sae"
-              className="gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white shadow-md transition-opacity hover:opacity-90"
-            >
-              Voir mes projets
-              <span aria-hidden>→</span>
-            </Link>
-            <Link
-              href="#bilan"
-              className="inline-flex items-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-medium text-gray-800 shadow-sm transition-colors hover:bg-gray-50"
-            >
-              Lire mon bilan
-            </Link>
+            <ButtonRainbow href="#sae">Voir mes projets</ButtonRainbow>
+            <ButtonWhite href="#bilan">Lire mon bilan</ButtonWhite>
           </div>
         </section>
 
@@ -149,7 +140,7 @@ export default function Home() {
         </section>
 
         {/* Explorer le portfolio */}
-        <section className="bg-[#fdfcf8] py-20">
+        <section className="py-20">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Explorer le portfolio
@@ -186,7 +177,7 @@ export default function Home() {
 
       <footer className="border-t border-gray-100 bg-white py-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 text-sm text-gray-400 sm:flex-row">
-          <p>© 2025 — Portfolio BUT. Réalisé avec passion.</p>
+          <p>© 2026 — Portfolio BUT. Réalisé avec passion.</p>
           <p>
             <span className="font-medium text-gray-600">Fiona Radi</span>
             {" · "}
