@@ -5,7 +5,7 @@ import Link from "next/link";
 import Balise from "./components/items/balise";
 
 const stats = [
-  { value: "6", label: "SAÉ réalisées" },
+  { value: "6", label: "Projets réalisés" },
   { value: "1", label: "Stage en entreprise" },
   { value: "12", label: "Compétences travaillées" },
   { value: "3", label: "Années de formation" },
@@ -13,10 +13,10 @@ const stats = [
 
 const portfolioCards = [
   {
-    href: "#sae",
-    title: "SAÉ",
+    href: "/projets",
+    title: "Projets",
     description:
-      "Mes situations d'apprentissage et d'évaluation, avec traces et livrables.",
+      "Mes projets scolaires et personnels, avec traces et livrables.",
     iconBg: "bg-pink-500",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" aria-hidden>
@@ -25,7 +25,7 @@ const portfolioCards = [
     ),
   },
   {
-    href: "#stage",
+    href: "/stage",
     title: "Stage",
     description:
       "Mes missions en entreprise et leur lien avec le référentiel.",
@@ -38,10 +38,10 @@ const portfolioCards = [
     ),
   },
   {
-    href: "#competences",
-    title: "Compétences",
+    href: "/bilan",
+    title: "Bilan",
     description:
-      "Référentiel BUT : niveaux atteints et preuves associées.",
+      "Mon retour réflexif sur mon parcours, mes apprentissages et mes objectifs.",
     iconBg: "bg-orange-500",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" aria-hidden>
@@ -89,12 +89,12 @@ export default function Home() {
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
             Étudiante en BUT, passionnée par le développement web. Découvrez mes
-            projets SAÉ, mon expérience de stage et ma montée en compétences à
+            projets, mon expérience de stage et ma montée en compétences à
             travers ce portfolio.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <ButtonRainbow href="#sae">Voir mes projets</ButtonRainbow>
+            <ButtonRainbow href="/projets">Voir mes projets</ButtonRainbow>
             <ButtonWhite href="#bilan">Lire mon bilan</ButtonWhite>
           </div>
         </section>
@@ -111,7 +111,7 @@ export default function Home() {
               </h2>
               <p className="mt-6 leading-relaxed text-gray-500">
                 Ce portfolio regroupe l&apos;ensemble de mes réalisations durant
-                ma formation en BUT. Chaque SAÉ témoigne de compétences
+                ma formation en BUT. Chaque projet témoigne de compétences
                 concrètes acquises en situation professionnelle.
               </p>
               <p className="mt-4 leading-relaxed text-gray-500">

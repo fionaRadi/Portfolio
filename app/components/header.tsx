@@ -24,7 +24,9 @@ export default function Header() {
         <nav className="flex items-center gap-1">
           {navItems.map(({ href, label }) => {
             const isActive =
-              href === "/" ? pathname === "/" : pathname === href;
+              href === "/"
+                ? pathname === "/"
+                : pathname === href || pathname.startsWith(`${href}/`);
 
             return (
               <Link
