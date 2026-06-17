@@ -129,8 +129,8 @@ export default function StagePage() {
               role="Poste : Développeuse Web · Stagiaire"
               period="Mai – Juillet 2026"
               location="Lyon 7ème, France"
-              description="[Feat coop est une société coopérative (SCOP) lyonnaise fondée en 2020, spécialisée dans la valorisation des stocks dormants textiles. La plateforme met en relation des fabricants français disposant de surplus de production avec des acheteurs professionnels (créateurs, stylistes, ateliers de confection), 
-              qui peuvent ainsi s'approvisionner en matières premières de qualité à prix réduit, dans une démarche de mode plus durable.]"
+              description="Feat coop est une société coopérative (SCOP) lyonnaise fondée en 2020, spécialisée dans la valorisation des stocks dormants textiles. La plateforme met en relation des fabricants français disposant de surplus de production avec des acheteurs professionnels (créateurs, stylistes, ateliers de confection), 
+              qui peuvent ainsi s'approvisionner en matières premières de qualité à prix réduit, dans une démarche de mode plus durable."
             />
           </div>
         </section>
