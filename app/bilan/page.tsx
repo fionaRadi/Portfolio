@@ -117,8 +117,9 @@ export default function BilanPage() {
           <div className="mt-10 text-left">
             <SummaryCard
               title="Synthèse du stage"
-              description={`Stage de huit semaines chez feat coop, coopérative lyonnaise de valorisation de stocks dormants textiles, axé sur la refonte du système de filtres et de recherche du site marchand. J'ai conçu (Figma, cahiers des charges) puis développé une sidebar de filtres complète (accordéon, sliders, pastilles couleur, persistance via TanStack Store et localStorage), une barre de recherche avec autocomplétion, un système de mailing transactionnel, un filtre qualité 1er/2nd choix, ainsi que de nombreuses corrections de design et de responsivité.
-Ce stage m'a permis de monter en compétences sur une stack full-stack moderne (TypeScript, React, Next.js, Supabase) et de m'intégrer dans une équipe de développement structurée. Les développements réalisés sont aujourd'hui en cours de déploiement sur le site marchand.`}
+              description={`Réalisé du 4 mai au 26 juin 2026 chez feat coop, société coopérative lyonnaise spécialisée dans la valorisation de stocks dormants textiles, ce stage de huit semaines avait pour objectif principal la refonte du système de filtres et de recherche du site marchand, 
+                afin d'améliorer l'expérience des utilisateurs (créateurs, stylistes, professionnels du textile) dans leur navigation au sein du catalogue. Ce stage m'a permis de mobiliser des compétences full-stack (TypeScript, React, Next.js App Router, Supabase/PostgreSQL), de découvrir de nouveaux outils (TanStack, shadcn/ui) et de m'intégrer pleinement dans une équipe de développement structurée, avec une méthode agile légère (réunions hebdomadaires, branches par fonctionnalité, pull requests).
+                 Les développements réalisés sont aujourd'hui en cours de déploiement sur le site marchand de feat coop.`}
             />
           </div>
         </section>
