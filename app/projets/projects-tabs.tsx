@@ -46,7 +46,7 @@ function ProjectCard({
       : "bg-gradient-to-r from-violet-500 to-pink-500";
 
   return (
-    <article className="flex flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_4px_12px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+    <article className="card-shadow card-shadow-hover flex flex-col rounded-2xl border border-gray-100 bg-white p-6">
       <div className="flex items-start justify-between gap-4">
         <span
           className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold text-white ${badgeClassName}`}

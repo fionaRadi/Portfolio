@@ -1,11 +1,14 @@
+import ButtonGlass from "./components/Buttons/button-glass";
 import ButtonRainbow from "./components/Buttons/button-rainbow";
-import ButtonWhite from "./components/Buttons/button-white";
 import Header from "./components/header";
 import Link from "next/link";
 import Balise from "./components/items/balise";
 
+const GITHUB_URL = "https://github.com/fionaRadi";
+const CV_PATH = "/CV_Fiona_Radi.pdf";
+
 const stats = [
-  { value: "6", label: "Projets réalisés" },
+  { value: "7", label: "Projets réalisés" },
   { value: "1", label: "Stage en entreprise" },
   { value: "12", label: "Compétences travaillées" },
   { value: "3", label: "Années de formation" },
@@ -51,6 +54,42 @@ const portfolioCards = [
   },
 ];
 
+function CvIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-4 w-4"
+      aria-hidden
+    >
+      <path
+        fillRule="evenodd"
+        d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm6.097 4.5a1.125 1.125 0 100-2.25.75.75 0 000 1.5.375.375 0 11-.375.375H9a.75.75 0 000 1.5h2.25a1.125 1.125 0 100 2.25.75.75 0 000-1.5.375.375 0 11.375-.375H9a.75.75 0 010-1.5h2.722zM7.5 15.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+function GitHubIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-4 w-4"
+      aria-hidden
+    >
+      <path
+        fillRule="evenodd"
+        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-2.782-1.343-.546-1.385-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C19.566 20.115 22 16.379 22 12.017 22 6.484 17.522 2 12 2z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
 function SparkleIcon() {
   return (
     <svg
@@ -95,7 +134,21 @@ export default function Home() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <ButtonRainbow href="/projets">Voir mes projets</ButtonRainbow>
-            <ButtonWhite href="#bilan">Lire mon bilan</ButtonWhite>
+            <ButtonGlass
+              href={CV_PATH}
+              download="CV_Fiona_Radi.pdf"
+              icon={<CvIcon />}
+            >
+              Télécharger mon CV
+            </ButtonGlass>
+            <ButtonGlass
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              icon={<GitHubIcon />}
+            >
+              Mon GitHub
+            </ButtonGlass>
           </div>
         </section>
 

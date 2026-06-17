@@ -2,7 +2,7 @@ import Link from "next/link";
 import { type ComponentProps } from "react";
 
 const baseClassName =
-  "inline-flex items-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-medium text-gray-800 shadow-sm transition-colors hover:bg-gray-50";
+  "inline-flex h-11 items-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-medium text-gray-800 shadow-sm transition-colors hover:bg-gray-50";
 
 type ButtonProps = Omit<ComponentProps<typeof Link>, "className"> & {
   className?: string;

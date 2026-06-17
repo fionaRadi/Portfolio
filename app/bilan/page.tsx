@@ -3,6 +3,9 @@ import ReflectionCard from "../components/cadres/reflection-card";
 import SelfAssessmentCard from "../components/cadres/self-assessment-card";
 import SkillsProgressCard from "../components/cadres/skills-progress-card";
 import SummaryCard from "../components/cadres/summary-card";
+import CompetenceRadarChart from "../components/charts/competence-radar-chart";
+import SkillGrowthChart from "../components/charts/skill-growth-chart";
+import StageDonutChart from "../components/charts/stage-donut-chart";
 import Header from "../components/header";
 
 const skillProgress = [
@@ -29,6 +32,19 @@ const selfAssessment = [
   { label: "Administrer", value: 70 },
   { label: "Conduire", value: 60 },
   { label: "Collaborer", value: 90 },
+];
+
+const skillGrowth = [
+  { label: "Réaliser", before: 45, after: 85 },
+  { label: "Administrer", before: 30, after: 70 },
+  { label: "Collaborer", before: 55, after: 90 },
+];
+
+const stageDistribution = [
+  { label: "Développement", value: 45, color: "#8b5cf6" },
+  { label: "CI/CD & DevOps", value: 25, color: "#a78bfa" },
+  { label: "Documentation", value: 15, color: "#ec4899" },
+  { label: "Réunions & collaboration", value: 15, color: "#f472b6" },
 ];
 
 function HeartIcon() {
@@ -108,6 +124,30 @@ export default function BilanPage() {
 
         <section className="mx-auto max-w-4xl space-y-8 px-6 pb-24">
           <SkillsProgressCard skills={skillProgress} />
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet-500">
+              Visualisations
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              Mes données en <span className="gradient-text">graphiques</span>
+            </h2>
+            <p className="mt-2 text-gray-500">
+              Une lecture visuelle de ma progression et de la répartition de mon
+              stage.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            <CompetenceRadarChart data={selfAssessment} />
+            <SkillGrowthChart data={skillGrowth} />
+          </div>
+
+          <StageDonutChart
+            data={stageDistribution}
+            centerLabel="du stage"
+            centerValue="12 sem."
+          />
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ReflectionCard

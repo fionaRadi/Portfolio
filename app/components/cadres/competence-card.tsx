@@ -56,7 +56,7 @@ export default function CompetenceCard({
   projects,
 }: CompetenceCardProps) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+    <article className="card-shadow overflow-hidden rounded-2xl border border-gray-100 bg-white">
       <div className={`h-1 ${accentClass}`} />
 
       <div className="p-8">

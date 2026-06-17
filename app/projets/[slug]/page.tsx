@@ -70,14 +70,14 @@ export default async function ProjectDetailPage({
             </p>
           </div>
 
-          <article className="mt-10 rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+          <article className="mt-10 rounded-3xl border border-gray-100 bg-white p-8 card-shadow">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
               Contexte du projet
             </p>
             <p className="mt-4 leading-relaxed text-gray-600">{project.context}</p>
           </article>
 
-          <article className="mt-6 rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+          <article className="mt-6 rounded-3xl border border-gray-100 bg-white p-8 card-shadow">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
               Objectifs
             </p>
@@ -94,7 +94,7 @@ export default async function ProjectDetailPage({
             </ul>
           </article>
 
-          <article className="mt-6 rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+          <article className="mt-6 rounded-3xl border border-gray-100 bg-white p-8 card-shadow">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
               Technologies utilisées
             </p>
@@ -118,7 +118,9 @@ export default async function ProjectDetailPage({
                 rel="noopener noreferrer"
                 className="gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white shadow-sm transition-opacity hover:opacity-90"
               >
-                Voir le projet en ligne
+                {project.externalUrl.includes("github.com")
+                  ? "Voir sur GitHub"
+                  : "Voir le projet en ligne"}
                 <span aria-hidden>→</span>
               </a>
             </div>

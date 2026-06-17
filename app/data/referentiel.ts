@@ -100,108 +100,179 @@ export const competenceDefinitions: Record<string, CompetenceDefinition> = {
 
 export const schoolProjects: Project[] = [
   {
-    slug: "sae-1-01",
+    slug: "fete-des-lumieres",
     category: "scolaire",
-    code: "SAÉ 1.01",
-    title: "Implémentation d'un besoin client",
-    semester: "Semestre 1",
-    description:
-      "Développement d'une application web répondant à un cahier des charges fourni par un client fictif.",
-    fullDescription:
-      "Première SAÉ du BUT : concevoir et développer une application web complète à partir d'un cahier des charges client. Le projet m'a permis de découvrir le cycle de vie d'un projet informatique, de l'analyse du besoin à la livraison d'une solution fonctionnelle.",
-    context:
-      "Réalisé en équipe de 3 au semestre 1, dans le cadre du parcours BUT. Un client fictif (association locale) a fourni un cahier des charges décrivant ses besoins de gestion. L'équipe devait proposer une solution web répondant aux contraintes fonctionnelles et techniques imposées.",
-    objectives: [
-      "Analyser et reformuler le cahier des charges client",
-      "Concevoir l'architecture et l'interface de l'application",
-      "Développer les fonctionnalités principales en respectant les délais",
-      "Tester l'application et corriger les anomalies identifiées",
-      "Présenter la solution lors d'une soutenance devant le client fictif",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    skills: ["Réaliser", "Collaborer"],
-    competences: [
-      { title: "Réaliser", level: 2 },
-      { title: "Collaborer", level: 2 },
-    ],
-  },
-  {
-    slug: "sae-2-02",
-    category: "scolaire",
-    code: "SAÉ 2.02",
-    title: "Exploration algorithmique d'un problème",
+    code: "Java",
+    title: "Fête des Lumières",
     semester: "Semestre 2",
     description:
-      "Analyse et résolution d'un problème complexe avec comparaison d'approches algorithmiques.",
+      "Optimisation du trajet de touristes entre les lieux à visiter lors de la Fête des Lumières à Lyon.",
     fullDescription:
-      "SAÉ centrée sur la résolution algorithmique d'un problème ouvert. L'enjeu était d'explorer plusieurs approches, d'en comparer la complexité et les performances, puis de justifier le choix de la solution retenue par des tests et une analyse rigoureuse.",
+      "Projet du BUT Informatique (semestre 2) : concevoir un programme capable d'optimiser le parcours de touristes souhaitant réduire leur temps de déplacement entre les différents lieux à visiter pendant la Fête des Lumières.",
     context:
-      "Projet individuel réalisé au semestre 2 dans le cadre du module d'algorithmique avancée. Le problème proposé portait sur l'optimisation de parcours (variante du voyageur de commerce simplifié), avec des contraintes de temps et de mémoire à respecter.",
+      "Projet réalisé dans le cadre du BUT Informatique au semestre 2. L'objectif était de modéliser un problème de parcours et d'y appliquer des approches algorithmiques pour proposer un itinéraire optimisé.",
     objectives: [
-      "Modéliser le problème et identifier les contraintes",
-      "Implémenter au moins deux approches algorithmiques différentes",
-      "Analyser la complexité théorique de chaque solution",
-      "Mesurer les performances sur des jeux de tests variés",
-      "Rédiger un rapport comparatif argumenté",
+      "Modéliser le problème de parcours touristique",
+      "Implémenter des algorithmes d'optimisation de trajet",
+      "Comparer les performances des solutions proposées",
+      "Valider les résultats sur des jeux de tests",
     ],
-    technologies: ["Python", "Algorithmique", "Complexité"],
+    technologies: ["Java", "Algorithmique", "NetBeans", "Git"],
     skills: ["Optimiser", "Réaliser"],
     competences: [
       { title: "Optimiser", level: 3 },
       { title: "Réaliser", level: 2 },
     ],
+    externalUrl: "https://github.com/fionaRadi/fete-des-lumieres",
   },
   {
-    slug: "sae-3-01",
+    slug: "blog-complot",
     category: "scolaire",
-    code: "SAÉ 3.01",
-    title: "Développement d'une application complexe",
-    semester: "Semestre 3",
+    code: "PHP",
+    title: "Blog du Complot",
+    semester: "BUT Informatique",
     description:
-      "Conception et déploiement d'une application full-stack avec base de données, authentification et CI/CD.",
+      "Blog collaboratif sur le thème du complot, avec articles, authentification et espace administrateur.",
     fullDescription:
-      "SAÉ la plus technique du parcours : développer une application full-stack complète, de la conception de la base de données au déploiement automatisé. Ce projet a consolidé mes compétences en développement, administration et gestion de projet.",
+      "Blog web développé en équipe sur le thème du complot. Les visiteurs peuvent lire des articles, rejoindre la communauté et partager leurs meilleures théories. L'application inclut un système d'authentification et un espace d'administration.",
     context:
-      "Projet réalisé en équipe de 4 sur 8 semaines au semestre 3. L'application devait répondre à un besoin réel identifié en amont (gestion de ressources partagées). L'équipe a adopté une méthode agile avec des sprints de 2 semaines et des revues régulières.",
+      "Projet scolaire réalisé en équipe (Fiona Radi, Corentin Schiano di Schabica, Sacha Pitalot), supervisé par Alexis Monnet. Développé en PHP avec une base de données MySQL.",
     objectives: [
-      "Concevoir l'architecture technique et modéliser la base de données",
-      "Implémenter l'authentification et les fonctionnalités métier",
-      "Mettre en place un pipeline CI/CD avec tests automatisés",
-      "Déployer l'application en environnement de production",
-      "Documenter l'API et rédiger un guide utilisateur",
+      "Concevoir l'architecture et la base de données du blog",
+      "Implémenter la consultation et la création d'articles",
+      "Mettre en place l'authentification des utilisateurs",
+      "Développer l'espace administrateur pour la gestion des catégories",
     ],
-    technologies: ["Next.js", "PostgreSQL", "Docker", "GitHub Actions"],
-    skills: ["Réaliser", "Administrer"],
+    technologies: ["PHP", "MySQL", "CSS", "HTML", "Draw.io", "Git"],
+    skills: ["Réaliser", "Collaborer"],
     competences: [
-      { title: "Réaliser", level: 4 },
-      { title: "Administrer", level: 3 },
+      { title: "Réaliser", level: 3 },
+      { title: "Collaborer", level: 3 },
     ],
+    externalUrl: "https://github.com/fionaRadi/blogComplot",
   },
   {
-    slug: "sae-3-02",
+    slug: "mc-info",
     category: "scolaire",
-    code: "SAÉ 3.02",
-    title: "Gestion de projet pluridisciplinaire",
+    code: "Python",
+    title: "McInfo",
+    semester: "BUT Informatique",
+    description:
+      "Application de gestion de stocks pour restaurant avec interface graphique et historique des commandes.",
+    fullDescription:
+      "McInfo simule un système de gestion de restaurant simplifié. L'application permet d'accéder à une borne sur laquelle on peut commander, s'identifier, et offre une partie administrateur pour suivre les stocks en temps réel, voir les commandes en cuisine et obtenir un historique.",
+    context:
+      "Projet scolaire développé en Python avec une interface graphique CustomTkinter. L'application distingue l'espace client (borne de commande) et l'espace administrateur (suivi des stocks et des commandes).",
+    objectives: [
+      "Concevoir l'interface graphique de la borne de commande",
+      "Implémenter la gestion des stocks en temps réel",
+      "Permettre le suivi des commandes en cuisine",
+      "Fournir un historique des commandes passées",
+    ],
+    technologies: ["Python", "CustomTkinter", "Tkinter", "Git"],
+    skills: ["Réaliser", "Gérer"],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Gérer", level: 2 },
+    ],
+    externalUrl: "https://github.com/fionaRadi/mcInfo",
+  },
+  {
+    slug: "liste-courses-symfony",
+    category: "scolaire",
+    code: "Symfony",
+    title: "Liste2Courses",
+    semester: "BUT Informatique",
+    description:
+      "Application web de gestion de listes de courses partagées, développée avec Symfony.",
+    fullDescription:
+      "Application web Liste2Courses permettant de créer et gérer des listes de courses. Développée avec le framework Symfony, elle inclut un système d'authentification utilisateur et un compte administrateur.",
+    context:
+      "Projet scolaire réalisé avec Symfony. L'application permet aux utilisateurs de s'inscrire, se connecter et gérer leurs listes de courses. Un compte administrateur (mini@ad.fr) donne accès aux fonctionnalités de gestion.",
+    objectives: [
+      "Configurer l'environnement Symfony et la base de données",
+      "Implémenter l'authentification et la gestion des utilisateurs",
+      "Développer les fonctionnalités de listes de courses partagées",
+      "Mettre en place les migrations Doctrine et les fixtures",
+    ],
+    technologies: ["Symfony", "PHP", "Twig", "MySQL", "Doctrine", "Git"],
+    skills: ["Réaliser", "Gérer"],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Gérer", level: 2 },
+    ],
+    externalUrl: "https://github.com/fionaRadi/listeCoursesSymfony",
+  },
+  {
+    slug: "app-kotlin",
+    category: "scolaire",
+    code: "Kotlin",
+    title: "Application mobile restaurants",
+    semester: "BUT Informatique",
+    description:
+      "Application Android pour rechercher des restaurants, les filtrer et les ajouter aux favoris.",
+    fullDescription:
+      "Application mobile Android développée en Kotlin avec Jetpack Compose. Elle permet de rechercher des restaurants via l'API Geoapify, de les afficher sur une carte, de consulter leurs détails et de les ajouter à une liste de favoris avec authentification.",
+    context:
+      "Projet scolaire de développement mobile. L'application suit une architecture MVVM avec des ViewModels, des repositories et une navigation entre les écrans (liste, carte, favoris, authentification).",
+    objectives: [
+      "Concevoir l'interface mobile avec Jetpack Compose",
+      "Intégrer l'API Geoapify pour la recherche de restaurants",
+      "Implémenter la carte interactive et les filtres",
+      "Gérer l'authentification et les favoris utilisateur",
+    ],
+    technologies: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Geoapify API",
+      "Android",
+      "Android Studio",
+      "Gradle",
+      "Git",
+    ],
+    skills: ["Réaliser", "Collaborer"],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Collaborer", level: 2 },
+    ],
+    externalUrl: "https://github.com/fionaRadi/AppKotlin",
+  },
+  {
+    slug: "astuschool",
+    category: "scolaire",
+    code: "SAÉ",
+    title: "astuSchool",
     semester: "Semestre 3",
     description:
-      "Coordination d'une équipe de 6 personnes pour livrer un produit à un client externe.",
+      "Projet de conduite et de documentation pour une application de gestion scolaire.",
     fullDescription:
-      "SAÉ transversale mêlant compétences techniques et gestion de projet. En tant que chef de projet, j'ai coordonné une équipe pluridisciplinaire pour livrer un produit numérique à un client externe, en respectant délais, budget et exigences qualité.",
+      "Projet scolaire de conduite de projet autour d'une application de gestion pour une école (astuSchool). Le dépôt regroupe la documentation, les diagrammes UML et le suivi des tâches de l'équipe.",
     context:
-      "Projet mené sur 10 semaines avec une équipe de 6 étudiants (2 développeurs, 1 designer, 1 chef de projet, 2 spécialistes métier). Le client, une PME locale, attendait un outil de suivi de commandes accessible en ligne. Des réunions hebdomadaires avec le client ont rythmé le projet.",
+      "Projet mené en équipe dans le cadre du BUT Informatique. Le dépôt contient les diagrammes de séquence (PlantUML), l'avant-projet détaillé et les fiches de suivi des tâches pour l'année 2025-2026.",
     objectives: [
-      "Planifier le projet et répartir les tâches entre les membres",
-      "Animer les cérémonies agiles (daily, sprint review, rétrospective)",
-      "Assurer le suivi de l'avancement et la gestion des risques",
-      "Coordonner la livraison et la recette avec le client",
-      "Restituer les résultats lors d'une présentation finale",
+      "Rédiger l'avant-projet et la documentation technique",
+      "Modéliser les cas d'utilisation et les diagrammes de séquence",
+      "Organiser le suivi des tâches en équipe",
+      "Préparer la conception de l'application astuSchool",
     ],
-    technologies: ["Figma", "Git", "Méthode agile", "Notion"],
+    technologies: [
+      "JavaScript",
+      "PHP",
+      "SQL",
+      "CSS",
+      "PlantUML",
+      "Figma",
+      "Draw.io",
+      "Excel",
+      "Git",
+      "Méthode agile",
+    ],
     skills: ["Conduire", "Collaborer"],
     competences: [
       { title: "Conduire", level: 3 },
-      { title: "Collaborer", level: 4 },
+      { title: "Collaborer", level: 3 },
     ],
+    externalUrl: "https://github.com/fionaRadi/astuschool",
   },
 ];
 
@@ -213,7 +284,7 @@ export const personalProjects: Project[] = [
     title: "Ce portfolio",
     semester: "2026",
     description:
-      "Site vitrine présentant mon parcours BUT, mes SAÉ, mon stage et mon bilan réflexif.",
+      "Site vitrine présentant mon parcours BUT, mes projets, mon stage et mon bilan réflexif.",
     fullDescription:
       "Portfolio professionnel développé en autonomie pour valoriser mon parcours en BUT. Il centralise mes projets scolaires et personnels, mon expérience de stage et mon bilan réflexif, dans une interface moderne et responsive.",
     context:
@@ -224,31 +295,17 @@ export const personalProjects: Project[] = [
       "Relier chaque projet aux compétences du référentiel BUT",
       "Optimiser le référencement et l'accessibilité du site",
     ],
-    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Figma",
+      "Git",
+    ],
     skills: ["Next.js", "React", "Tailwind CSS"],
     competences: [],
-  },
-  {
-    slug: "application-mobile",
-    category: "personnel",
-    code: "Perso",
-    title: "Application mobile de suivi",
-    semester: "2025",
-    description:
-      "Application mobile développée en autonomie pour organiser des tâches et suivre des objectifs personnels.",
-    fullDescription:
-      "Application mobile conçue pour aider à organiser des tâches quotidiennes et suivre des objectifs personnels sur la durée. Le projet m'a permis de consolider mes compétences en développement mobile et en intégration d'API.",
-    context:
-      "Projet personnel réalisé en dehors du cursus, motivé par le besoin d'un outil simple de suivi d'habitudes. Développement itératif sur 3 mois, avec retours d'utilisateurs testeurs (proches) pour améliorer l'expérience.",
-    objectives: [
-      "Concevoir une interface mobile intuitive et accessible",
-      "Implémenter la gestion de tâches avec persistance locale",
-      "Synchroniser les données via une API REST",
-      "Publier une version beta testable sur appareil réel",
-    ],
-    technologies: ["React Native", "TypeScript", "Expo", "API REST"],
-    skills: ["React Native", "TypeScript", "API REST"],
-    competences: [],
+    externalUrl: "https://github.com/fionaRadi/Portfolio",
   },
 ];
 
