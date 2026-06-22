@@ -1,28 +1,14 @@
+import CompetenceCard from "./competence-card";
+import type { ProjectCompetence } from "../../data/referentiel";
+import { competenceDefinitions } from "../../data/referentiel";
+
 type MissionCardProps = {
   number: number;
   title: string;
   description: string;
-  skills: string[];
+  competences: ProjectCompetence[];
   deliverables: string[];
 };
-
-function TargetIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="h-4 w-4 text-gray-400"
-      aria-hidden
-    >
-      <path
-        fillRule="evenodd"
-        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12 18.75a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5zM12 15a3 3 0 100-6 3 3 0 000 6z"
-        clipRule="evenodd"
-      />
-    </svg>
-  );
-}
 
 function DocumentIcon() {
   return (
@@ -47,9 +33,14 @@ export default function MissionCard({
   number,
   title,
   description,
-  skills,
+  competences,
   deliverables,
 }: MissionCardProps) {
+  const resolvedCompetences = competences.map(({ title, level }) => ({
+    ...competenceDefinitions[title],
+    level,
+  }));
+
   return (
     <article className="rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
       <div className="flex items-start gap-4">
@@ -62,36 +53,34 @@ export default function MissionCard({
         </div>
       </div>
 
-      <div className="mt-8 grid gap-8 sm:grid-cols-2">
-        <div>
-          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
-            <TargetIcon />
+      <div className="mt-8">
+        <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+          <DocumentIcon />
+          Livrables
+        </p>
+        <ul className="mt-3 space-y-1.5 text-sm text-gray-500">
+          {deliverables.map((item) => (
+            <li key={item}>• {item}</li>
+          ))}
+        </ul>
+      </div>
+
+      {resolvedCompetences.length > 0 && (
+        <div className="mt-8 border-t border-gray-100 pt-8">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
             Compétences mobilisées
           </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="inline-flex items-center rounded-full border border-violet-100 bg-violet-50/80 px-3 py-1 text-sm text-gray-700"
-              >
-                → {skill}
-              </span>
+          <p className="mt-2 text-sm text-gray-500">
+            Niveaux atteints et composantes du référentiel BUT mobilisées lors
+            de cette mission.
+          </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {resolvedCompetences.map((competence) => (
+              <CompetenceCard key={competence.title} {...competence} />
             ))}
           </div>
         </div>
-
-        <div>
-          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
-            <DocumentIcon />
-            Livrables
-          </p>
-          <ul className="mt-3 space-y-1.5 text-sm text-gray-500">
-            {deliverables.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      )}
     </article>
   );
 }

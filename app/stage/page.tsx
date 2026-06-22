@@ -3,29 +3,7 @@ import CompanyCard from "../components/cadres/company-card";
 import MissionCard from "../components/cadres/mission-card";
 import Header from "../components/header";
 import Balise from "../components/items/balise";
-
-const missions = [
-  {
-    number: 1,
-    title: "Refonte de l'interface admin",
-    description:
-      "Conception et développement d'un nouveau back-office pour faciliter la gestion quotidienne des contenus par les équipes métier.",
-    skills: ["Réaliser", "Collaborer"],
-    deliverables: [
-      "Maquettes Figma",
-      "Code React",
-      "Documentation utilisateur",
-    ],
-  },
-  {
-    number: 2,
-    title: "Mise en place d'une CI/CD",
-    description:
-      "Automatisation du pipeline de déploiement avec GitHub Actions, tests automatisés et déploiement continu vers la pré-production.",
-    skills: ["Administrer", "Optimiser"],
-    deliverables: ["Workflows YAML", "Documentation technique"],
-  },
-];
+import { stageMissions } from "../data/referentiel";
 
 function BriefcaseIcon() {
   return (
@@ -81,7 +59,7 @@ export default function StagePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-4xl px-6 pb-24">
+        <section className="mx-auto max-w-6xl px-6 pb-24">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Missions réalisées
           </h2>
@@ -90,7 +68,7 @@ export default function StagePage() {
           </p>
 
           <div className="mt-8 space-y-6">
-            {missions.map((mission) => (
+            {stageMissions.map((mission) => (
               <MissionCard key={mission.number} {...mission} />
             ))}
           </div>

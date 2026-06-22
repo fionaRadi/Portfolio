@@ -10,6 +10,14 @@ export type ProjectCompetence = {
   level: number;
 };
 
+export type StageMission = {
+  number: number;
+  title: string;
+  description: string;
+  deliverables: string[];
+  competences: ProjectCompetence[];
+};
+
 export type ProjectCategory = "scolaire" | "personnel";
 
 export type Project = {
@@ -310,6 +318,35 @@ export const personalProjects: Project[] = [
 ];
 
 export const projects = [...schoolProjects, ...personalProjects];
+
+export const stageMissions: StageMission[] = [
+  {
+    number: 1,
+    title: "Refonte de l'interface admin",
+    description:
+      "Conception et développement d'un nouveau back-office pour faciliter la gestion quotidienne des contenus par les équipes métier.",
+    deliverables: [
+      "Maquettes Figma",
+      "Code React",
+      "Documentation utilisateur",
+    ],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Collaborer", level: 3 },
+    ],
+  },
+  {
+    number: 2,
+    title: "Mise en place d'une CI/CD",
+    description:
+      "Automatisation du pipeline de déploiement avec GitHub Actions, tests automatisés et déploiement continu vers la pré-production.",
+    deliverables: ["Workflows YAML", "Documentation technique"],
+    competences: [
+      { title: "Administrer", level: 3 },
+      { title: "Optimiser", level: 2 },
+    ],
+  },
+];
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);
