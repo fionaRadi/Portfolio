@@ -3,82 +3,7 @@ import CompanyCard from "../components/cadres/company-card";
 import MissionCard from "../components/cadres/mission-card";
 import Header from "../components/header";
 import Balise from "../components/items/balise";
-
-const missions = [
-  {
-    number: 1,
-    title: "Refonte UX/UI du système de filtres catalogue",
-    description:
-      "Conception sur Figma puis développement d'une sidebar de filtres avec système d'accordéon, sliders de plage et pastilles de couleur dynamiques, en remplacement de l'ancien système basé sur les paramètres d'URL. Migration de la gestion d'état vers TanStack Store avec persistance localStorage pour des filtres plus rapides et conservés entre les visites.",
-    skills: ["Réaliser", "Collaborer"],
-    deliverables: [
-      "Maquettes Figma",
-      "Composants React (sidebar, accordéon, sliders, pastilles couleur)",
-      "Migration SQL (hex_color)",
-    ],
-  },
-  {
-    number: 2,
-    title: "Intégration du système de mailing",
-    description:
-      "Mise en place d'un formulaire de contact connecté à Mailjet : création du template d'email, configuration de l'API et gestion de la confirmation d'envoi.",
-    skills: ["Administrer", "Réaliser"],
-    deliverables: [
-      "Template d'email Mailjet",
-      "Formulaire de contact (popup React)",
-      "Documentation technique (configuration API)",
-    ],
-  },
-  {
-    number: 3,
-    title: "Conception UX/UI des filtres et de la recherche",
-    description:
-      "Rédaction des cahiers des charges (benchmark des sites concurrents, recueil des règles de gestion), maquettage sur Figma de plusieurs versions desktop et mobile, réalisation de diagrammes de séquence pour formaliser les interactions front/back, et rédaction d'un rapport de conception technique servant de base au développement.",
-    skills: ["Conduire", "Collaborer"],
-    deliverables: [
-      "Cahiers des charges",
-      "Maquettes Figma (desktop & mobile)",
-      "Diagrammes de séquence",
-      "Rapport de conception technique",
-    ],
-  },
-  {
-    number: 4,
-    title: "Migration de la gestion d'état vers TanStack Store",
-    description:
-      "Refonte de la logique de filtres, auparavant gérée via les paramètres d'URL, vers un store TanStack couplé à localStorage, pour des filtres persistants entre les visites et des performances de navigation améliorées.",
-    skills: ["Optimiser", "Réaliser"],
-    deliverables: [
-      "Store TanStack (lib/catalog/store.ts)",
-      "Module de synchronisation localStorage (filter-storage.ts)",
-      "Hooks personnalisés (useCatalogFilters, useCatalogFilterActions, etc.)",
-    ],
-  },
-  {
-    number: 5,
-    title: "Filtre qualité 1er choix / 2nd choix",
-    description:
-      "Mise en place complète du pipeline : migration SQL, composant de filtre, badge sur les fiches produit et alerte d'information dans les résultats de recherche.",
-    skills: ["Réaliser", "Gérer"],
-    deliverables: [
-      "Migration SQL (quality_grade)",
-      "Composant de filtre qualité (textile-quality-filter.tsx)",
-      "Badge produit et alerte UI",
-    ],
-  },
-  {
-    number: 6,
-    title: "Corrections de design et de responsivité",
-    description:
-      "Refonte complète du header (navigation), corrections de bugs d'affichage liés aux fusions de branches, réorganisation des onglets de la sidebar mobile, et améliorations UX sur les fiches produit et le tunnel de commande.",
-    skills: ["Réaliser", "Optimiser"],
-    deliverables: [
-      "Header refondu (composant navigation)",
-      "Corrections de responsivité (mobile)",
-      "Corrections de bugs post-fusion",
-    ],
-  },
-];
+import { stageMissions } from "../data/referentiel";
 
 function BriefcaseIcon() {
   return (
@@ -129,8 +54,7 @@ export default function StagePage() {
               role="Poste : Développeuse Web · Stagiaire"
               period="Mai – Juillet 2026"
               location="Lyon 7ème, France"
-              description="Feat coop est une société coopérative (SCOP) lyonnaise fondée en 2020, spécialisée dans la valorisation des stocks dormants textiles. La plateforme met en relation des fabricants français disposant de surplus de production avec des acheteurs professionnels (créateurs, stylistes, ateliers de confection), 
-              qui peuvent ainsi s'approvisionner en matières premières de qualité à prix réduit, dans une démarche de mode plus durable."
+              description="Feat coop est une société coopérative (SCOP) lyonnaise fondée en 2020, spécialisée dans la valorisation des stocks dormants textiles. La plateforme met en relation des fabricants français disposant de surplus de production avec des acheteurs professionnels (créateurs, stylistes, ateliers de confection), qui peuvent ainsi s'approvisionner en matières premières de qualité à prix réduit, dans une démarche de mode plus durable."
             />
           </div>
         </section>

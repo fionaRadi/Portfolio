@@ -322,13 +322,13 @@ export const projects = [...schoolProjects, ...personalProjects];
 export const stageMissions: StageMission[] = [
   {
     number: 1,
-    title: "Refonte de l'interface admin",
+    title: "Refonte UX/UI du système de filtres catalogue",
     description:
-      "Conception et développement d'un nouveau back-office pour faciliter la gestion quotidienne des contenus par les équipes métier.",
+      "Conception sur Figma puis développement d'une sidebar de filtres avec système d'accordéon, sliders de plage et pastilles de couleur dynamiques, en remplacement de l'ancien système basé sur les paramètres d'URL. Migration de la gestion d'état vers TanStack Store avec persistance localStorage pour des filtres plus rapides et conservés entre les visites.",
     deliverables: [
       "Maquettes Figma",
-      "Code React",
-      "Documentation utilisateur",
+      "Composants React (sidebar, accordéon, sliders, pastilles couleur)",
+      "Migration SQL (hex_color)",
     ],
     competences: [
       { title: "Réaliser", level: 3 },
@@ -337,13 +337,78 @@ export const stageMissions: StageMission[] = [
   },
   {
     number: 2,
-    title: "Mise en place d'une CI/CD",
+    title: "Intégration du système de mailing",
     description:
-      "Automatisation du pipeline de déploiement avec GitHub Actions, tests automatisés et déploiement continu vers la pré-production.",
-    deliverables: ["Workflows YAML", "Documentation technique"],
+      "Mise en place d'un formulaire de contact connecté à Mailjet : création du template d'email, configuration de l'API et gestion de la confirmation d'envoi.",
+    deliverables: [
+      "Template d'email Mailjet",
+      "Formulaire de contact (popup React)",
+      "Documentation technique (configuration API)",
+    ],
     competences: [
       { title: "Administrer", level: 3 },
-      { title: "Optimiser", level: 2 },
+      { title: "Réaliser", level: 3 },
+    ],
+  },
+  {
+    number: 3,
+    title: "Conception UX/UI des filtres et de la recherche",
+    description:
+      "Rédaction des cahiers des charges (benchmark des sites concurrents, recueil des règles de gestion), maquettage sur Figma de plusieurs versions desktop et mobile, réalisation de diagrammes de séquence pour formaliser les interactions front/back, et rédaction d'un rapport de conception technique servant de base au développement.",
+    deliverables: [
+      "Cahiers des charges",
+      "Maquettes Figma (desktop & mobile)",
+      "Diagrammes de séquence",
+      "Rapport de conception technique",
+    ],
+    competences: [
+      { title: "Conduire", level: 3 },
+      { title: "Collaborer", level: 3 },
+    ],
+  },
+  {
+    number: 4,
+    title: "Migration de la gestion d'état vers TanStack Store",
+    description:
+      "Refonte de la logique de filtres, auparavant gérée via les paramètres d'URL, vers un store TanStack couplé à localStorage, pour des filtres persistants entre les visites et des performances de navigation améliorées.",
+    deliverables: [
+      "Store TanStack (lib/catalog/store.ts)",
+      "Module de synchronisation localStorage (filter-storage.ts)",
+      "Hooks personnalisés (useCatalogFilters, useCatalogFilterActions, etc.)",
+    ],
+    competences: [
+      { title: "Optimiser", level: 3 },
+      { title: "Réaliser", level: 3 },
+    ],
+  },
+  {
+    number: 5,
+    title: "Filtre qualité 1er choix / 2nd choix",
+    description:
+      "Mise en place complète du pipeline : migration SQL, composant de filtre, badge sur les fiches produit et alerte d'information dans les résultats de recherche.",
+    deliverables: [
+      "Migration SQL (quality_grade)",
+      "Composant de filtre qualité (textile-quality-filter.tsx)",
+      "Badge produit et alerte UI",
+    ],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Gérer", level: 3 },
+    ],
+  },
+  {
+    number: 6,
+    title: "Corrections de design et de responsivité",
+    description:
+      "Refonte complète du header (navigation), corrections de bugs d'affichage liés aux fusions de branches, réorganisation des onglets de la sidebar mobile, et améliorations UX sur les fiches produit et le tunnel de commande.",
+    deliverables: [
+      "Header refondu (composant navigation)",
+      "Corrections de responsivité (mobile)",
+      "Corrections de bugs post-fusion",
+    ],
+    competences: [
+      { title: "Réaliser", level: 3 },
+      { title: "Optimiser", level: 3 },
     ],
   },
 ];
